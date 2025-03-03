@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  display: block;
+  height: 78px;
+  background-color: #a67629;
+  /* background-color: #f4f4f4; */
+  margin: 10px;
+}
+
+.nav-list {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 12px;
+}
+
+.start {
+  margin-right: auto;
+}
+
+.end {
+  position: relative;
+  margin-left: 10px;
+}
+
+.searchBox {
+  width: 287px;
+  height: 56px;
+  padding: 10px 15px;
+  border-radius: 28px;
+  border: 1px solid black;
+  font-size: 18px;
+  line-height: 1.5;
+  outline: none;
+}
+
+.end button {
+  position: absolute;
+  width: 51px;
+  height: 52px;
+  right: 10px;
+  border: none;
+  background: transparent;
+}
+
+.end img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* main */
+
+.grid-container {
+  margin: 10px;
+  height: 873px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #fff8e1;
+  /* background-color: #fff5d7; */
+}
+
+.grid-item {
+  width: 280px;
+  height: 371px;
+  /* border: 1px solid black; */
+  margin: 37px auto;
+  background-color: #f4f4f4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.grid-img-container {
+  width: 263px;
+  height: 291px;
+  margin: 8px;
+}
+
+.grid-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stats {
+  width: 263px;
+  height: 53px;
+  display: flex;
+  margin: 8px;
+  border: 1px solid black;
+}
+
+.stats ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats img {
+  cursor: pointer;
+}
+
+/* PopUp */
+
+.popUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: #ffffff;
+  width: 60%;
+  height: 75%;
+  border-radius: 28px;
+}
+
+.popUp button {
+  width: 50px;
+  height: 33px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 0 0 auto;
+}
+
+.popUp button:hover {
+  background-color: #0056b3;
+}
+
+.cover {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.cover img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 5px;
+}
+
+.book-details li {
+  width: 350px;
+  height: 25px;
+  border: 1px solid black;
+}
+
+.popUp input {
+  font-size: 18px;
+  width: 650px;
+  height: 200px;
+  border: 0.3px solid black;
+  outline: none;
+  padding: 10px 15px;
+}
