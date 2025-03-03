@@ -4,42 +4,26 @@ import "./authentication.css";
 import LoginTextbox from "./Textfield";
 import { Link } from "react-router-dom";
 
-const login = () => {
+const Login = () => {
   return (
     <form className="login-container">
-      <img src={Logo} />
+      <img src={Logo} alt="Logo" />
       <h1>Login</h1>
       <ul className="credential">
-        <LoginTextbox placeHolderText={"Email"} />
-        <LoginTextbox placeHolderText={"Password"} />
+        <LoginTextbox placeHolderText="Email" />
+        <LoginTextbox placeHolderText="Password" />
         <span>
-          <Link>forgot my password</Link>
+          <Link to="/forgot-password">Forgot my password</Link>
         </span>
-        <button>Login</button>
+        <button type="submit">Login</button>
         <span>
-          Don't have an account? <Link to="/signup">Sign-up</Link>
+          Don&apos;t have an account? <Link to="/signup">Sign Up</Link>
         </span>
-        <button
-          style={{
-            backgroundColor: "white",
-            color: "black",
-            border: "1px solid black",
-          }}
-        >
-          Login with facebook
-        </button>
-        <button
-          style={{
-            backgroundColor: "white",
-            color: "black",
-            border: "1px solid black",
-          }}
-        >
-          Login with google
-        </button>
+        <button className="social-login">Login with Facebook</button>
+        <button className="social-login">Login with Google</button>
       </ul>
     </form>
   );
 };
 
-export default login;
+export default Login;

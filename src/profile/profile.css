@@ -1,77 +1,83 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+/* profile.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", serif;
+  font-family: "Quicksand", sans-serif;
   color: #333333;
 }
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5efe6;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  width: 500px;
-  height: 93vh;
-  margin: 10px auto 0 auto;
-  position: relative;
-  background: #ffffff;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  width: 450px;
+  padding: 30px;
+  background: #f8e8b2;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e0c097;
 }
 
-.profile > img {
-  margin: 0 0 0 auto;
+.settings-icon {
+  align-self: flex-end;
   cursor: pointer;
-  height: 45px;
-  padding: 7px;
+  width: 30px;
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
-  background: #ffffff;
-  background: transparent;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #e49938;
 }
 
-.profile-pic > img {
+.profile-pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
 }
 
-.profile span {
-  font-size: 26px;
+.profile-name {
+  font-size: 22px;
+  font-weight: bold;
 }
 
-.textarea {
-  font-size: 18px;
-  width: 350px;
-  height: 150px;
-  border: 0.3px solid black;
+.profile-email {
+  font-size: 14px;
+  color: #555;
+}
+
+.vintage-textarea {
+  width: 90%;
+  height: 100px;
+  border: 1px solid #c8a97e;
+  padding: 10px;
+  border-radius: 5px;
   outline: none;
-  padding: 10px 15px;
+  background: #ffecd5;
 }
 
-.action {
+.vintage-action {
   display: flex;
-  align-items: center;
-  gap: 100px;
-  height: 72px;
+  gap: 20px;
 }
 
-.action img {
-  height: 50px;
+.action-icon {
+  width: 40px;
   cursor: pointer;
-}
-
-/* collection */
-
-h1 {
-  padding: 20px;
-  font-size: 4rem;
-  font-family: "Quicksand", serif;
-  font-weight: 500;
-  text-align: center;
 }

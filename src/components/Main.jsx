@@ -92,8 +92,9 @@ const GridItem = ({ source, onIsOpen, collection }) => {
   );
 };
 
-export default Main;
+
 
 GridItem.propTypes = {
   source: PropTypes.string,
 };
+export default Main;
