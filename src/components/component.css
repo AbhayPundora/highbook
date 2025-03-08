@@ -40,7 +40,19 @@
   line-height: 1.5;
   outline: none;
 }
-
+.login-btn button{
+  border: 2px solid black;
+  background-color: #a67629;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  transition: all ease-in-out 0.2s;
+}
+.login-btn button:hover,.end img:hover{
+  transform: scale(1.1);
+}
 .end button {
   position: absolute;
   width: 51px;
@@ -51,10 +63,12 @@
 }
 
 .end img {
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   cursor: pointer;
+  transition: all ease-in-out 0.2s;
+
 }
 
 /* main */
@@ -68,18 +82,23 @@
   /* background-color: #fff5d7; */
 }
 
-.grid-item {
-  width: 280px;
-  height: 371px;
-  /* border: 1px solid black; */
-  margin: 37px auto;
-  background-color: #f4f4f4;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  .grid-item {
+    width: 280px;
+    height: 371px;
+    margin: 37px auto;
+    background: url("https://www.transparenttextures.com/patterns/aged-paper.png");
+    background-color: #f5e1c5; /* Warm, old-paper color */
+    border: 2px solid rgba(140, 110, 90, 0.6); /* Faded brown border */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 
+                4px 4px 10px rgba(0, 0, 0, 0.3); /* Soft vintage shadows */
+    border-radius: 8px;
+    filter: sepia(20%) contrast(90%) brightness(95%); /* Vintage effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
 .grid-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .grid-img-container {
@@ -92,6 +111,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: sepia(15%) contrast(90%) brightness(90%);
 }
 
 .stats {
@@ -100,6 +120,8 @@
   display: flex;
   margin: 8px;
   border: 1px solid black;
+  border: 1px solid rgba(140, 110, 90, 0.6); /* Softer brown border */
+  background: rgba(245, 225, 197, 0.8); /* Slight transparency */
 }
 
 .stats ul {
@@ -110,6 +132,7 @@
   gap: 25px;
   justify-content: center;
   align-items: center;
+  color: #5b4636;
 }
 
 .stats img {
@@ -156,6 +179,7 @@
   align-items: center;
 }
 
+
 .cover img {
   width: 200px;
   height: 200px;
@@ -182,4 +206,15 @@
   border: 0.3px solid black;
   outline: none;
   padding: 10px 15px;
+}
+
+/* footer  */
+
+.footer {
+  background-color: #5b4636;
+  color: rgb(233, 93, 93) !important;
+  text-align: center;
+  padding: 15px;
+  font-size: 1rem;
+  width: 100%;
 }

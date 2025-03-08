@@ -7,39 +7,34 @@ import BookIcon from "../assets/bookIcon.svg";
 import Heart from "../assets/Heart.svg";
 import { Link } from "react-router-dom";
 
-const profile = () => {
+const Profile = () => {
   const [bio, setBio] = useState("");
 
-  function handleBioData(e) {
-    setBio(e.target.value);
-  }
   return (
-    <div
-      style={{ backgroundColor: "#FFF5D7", height: "100vh", padding: "10px" }}
-    >
-      <form className="profile">
-        <img src={Setting} />
+    <div className="profile-container">
+      <form className="profile vintage-card">
+        <img src={Setting} alt="Settings" className="settings-icon" />
         <div className="profile-pic">
-          <img src={Pic} alt="profile pic" />
+          <img src={Pic} alt="Profile pic" />
         </div>
-        <span>Abhay Pundora</span>
-        <span>abhaypundora17@gmail.com</span>
-        <input
-          className="textarea"
-          type="text"
+        <span className="profile-name">Abhay Pundora</span>
+        <span className="profile-email">abhaypundora17@gmail.com</span>
+        <textarea
+          className="textarea vintage-textarea"
+          placeholder="Write something about yourself..."
           value={bio}
-          onChange={handleBioData}
-        />
-        <div className="action">
-          <img src={Add} />
+          onChange={(e) => setBio(e.target.value)}
+        ></textarea>
+        <div className="action vintage-action">
+          <img src={Add} alt="Add" className="action-icon" />
           <Link to="/collection">
-            <img src={BookIcon} />
+            <img src={BookIcon} alt="Collection" className="action-icon" />
           </Link>
-          <img src={Heart} />
+          <img src={Heart} alt="Favorites" className="action-icon" />
         </div>
       </form>
     </div>
   );
 };
 
-export default profile;
+export default Profile;

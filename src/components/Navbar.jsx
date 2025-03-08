@@ -34,6 +34,11 @@ const Navbar = () => {
             <img src={Search} />
           </button>
         </li>
+        <li className="login-btn">
+          <Link to="/login">
+           <button>Log in</button>
+          </Link>
+        </li>
         <li className="end">
           <Link to="/profile">
             <img src={UserImage} alt="profile of user" />
