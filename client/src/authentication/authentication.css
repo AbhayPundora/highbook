@@ -1,0 +1,43 @@
+input {
+  width: 600px;
+  height: 50px;
+  border: 1px solid black;
+  padding: 10px;
+  outline: none;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container img {
+  height: 130px;
+}
+
+.login-container h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding-top: 0;
+}
+
+.credential {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 15px;
+}
+
+.credential button {
+  width: 600px;
+  height: 50px;
+  background-color: #1c1c1c;
+  padding: 10px;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.3rem;
+}

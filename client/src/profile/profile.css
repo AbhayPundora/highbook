@@ -1,0 +1,91 @@
+/* profile.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  color: #333333;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5efe6;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 450px;
+  padding: 30px;
+  background: #f8e8b2;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e0c097;
+}
+
+.profile > button {
+  width: 100px;
+  background-color: #e49938;
+  border: none;
+  padding: 10px 20px;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.settings-icon {
+  align-self: flex-end;
+  cursor: pointer;
+  width: 30px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #e49938;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.profile-email {
+  font-size: 14px;
+  color: #555;
+}
+
+.vintage-textarea {
+  width: 90%;
+  height: 100px;
+  border: 1px solid #c8a97e;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  background: #ffecd5;
+}
+
+.vintage-action {
+  display: flex;
+  gap: 20px;
+}
+
+.action-icon {
+  width: 40px;
+  cursor: pointer;
+}
