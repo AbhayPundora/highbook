@@ -6,6 +6,8 @@ import Profile from "./profile/Profile.jsx";
 import Collection from "./profile/collection.jsx";
 import SignUp from "./authentication/SignUp.jsx";
 import Login from "./authentication/Login.jsx";
+import { AuthContextProvider } from "./context/AuthContext.jsx";
+import Update from "./profileUpdatePage/profileUpdatePage.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -30,10 +32,16 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+  {
+    path: "/update",
+    element: <Update />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthContextProvider>
+      <RouterProvider router={router} />
+    </AuthContextProvider>
   </StrictMode>
 );

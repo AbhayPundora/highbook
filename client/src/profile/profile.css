@@ -30,7 +30,8 @@
   border: 2px solid #e0c097;
 }
 
-.profile > button {
+.profile > button,
+.text-btn {
   width: 100px;
   background-color: #e49938;
   border: none;
@@ -38,6 +39,11 @@
   color: black;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.text-btn {
+  width: 70px !important;
+  padding: 7px 7px !important;
 }
 
 .settings-icon {
@@ -70,7 +76,7 @@
   color: #555;
 }
 
-.vintage-textarea {
+.bio {
   width: 90%;
   height: 100px;
   border: 1px solid #c8a97e;

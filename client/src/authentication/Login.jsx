@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Logo from "../assets/logo.svg";
 import "./authentication.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { updateUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -29,7 +31,11 @@ const Login = () => {
       );
 
       // if we are using using localstorage we cant send object , we have to send string
-      localStorage.setItem("user", JSON.stringify(res.data));
+      // console.log(res.data);
+
+      // localStorage.setItem("user", JSON.stringify(res.data));  we use updateUser function to set local storage
+      updateUser(res.data);
+
       navigate("/");
     } catch (err) {
       console.log(err);

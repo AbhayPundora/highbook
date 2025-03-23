@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./component.css";
 import Logo from "../assets/logo.png";
 import UserImage from "../assets/user.png";
 import Search from "../assets/search.png";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
+  const { currentUser } = useContext(AuthContext);
+  console.log("currentUser : ", currentUser);
   const [search, setSearch] = useState(" ");
 
   function handleChange(e) {
@@ -34,14 +37,16 @@ const Navbar = () => {
             <img src={Search} />
           </button>
         </li>
-        <li className="login-btn">
-          <Link to="/login">
-           <button>Log in</button>
-          </Link>
-        </li>
+        {!currentUser && (
+          <li className="login-btn">
+            <Link to="/login">
+              <button>Log in</button>
+            </Link>
+          </li>
+        )}
         <li className="end">
           <Link to="/profile">
-            <img src={UserImage} alt="profile of user" />
+            <img src={currentUser?.avatar || UserImage} alt="profile of user" />
           </Link>
         </li>
       </ul>

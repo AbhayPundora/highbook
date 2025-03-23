@@ -8,7 +8,7 @@ export const verifyToken = (req, res, next) => {
   if (!token) return res.status(401).json({ message: "Not Authenticated!" });
 
   // we have to verify the token,it might be expire or user might change our jwt token
-  //   payload is user information which we passed in js token in our case id
+  //   payload is user information which we passed in js token in our case id, it can be named anything
   jwt.verify(token, process.env.JWT_SECRET_KEY, async (err, payload) => {
     if (err) return res.status(403).json({ message: "Token is not valid" });
 
